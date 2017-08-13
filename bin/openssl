@@ -1,0 +1,9 @@
+#!/bin/bash
+openssl="docker run --rm \
+                   --interactive \
+                   --tty \
+                   -v "$(pwd):$(pwd)" \
+                   -w $(pwd) \
+                   -it muccg/openssl"
+
+exec $openssl "$@"
